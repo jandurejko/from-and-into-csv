@@ -4,6 +4,10 @@ import time
 
 geolocator = Nominatim()
 csvFileName = input("insert the file name you want to scan(whiteout the csv extension)")
+<<<<<<< HEAD
+=======
+#timer = input("Enter the wait time in sec.: ")
+>>>>>>> 9866bad9c889061b83715405aa5da0f23e74cf7d
 
 with open(csvFileName + '.csv', 'r') as in_file:
     reader = csv.reader(in_file)
@@ -21,6 +25,10 @@ with open(csvFileName + '.csv', 'r') as in_file:
             row.append(locaiton.latitude)
             row.append(locaiton.longitude)
             writer.writerow(row)
+<<<<<<< HEAD
             #time.sleep(0.5)#optional so it doesn't overflood. If not many addresses you can remove it
         elif locaiton is None:
             broken.writerow(row)
+=======
+            #time.sleep(0.2)#optional so it doesn't overflood. If not many addresses you can remove it
+>>>>>>> 9866bad9c889061b83715405aa5da0f23e74cf7d
